@@ -2,7 +2,7 @@
 
 This sample code has two defined flavors: `dev` and `qa`.
 
-To run a specific flavor from the command line tou can use `flutter run --flavor qa`.
+To run a specific flavor from the command line you can use `flutter run --flavor qa`.
 
 On Android Studio you can edit your run target and add the flavor flag there.
 
@@ -13,7 +13,7 @@ Here is a quick cheatsheet on what has been done to change the app name, bundle 
 
 ## Android Flavors
 
-The falvors on android are declared in `android/app/build.grade`.
+The flavors on android are declared in `android/app/build.grade`.
 
 `defaultConfig` object declares the default values for all app builds, everything that you can
 configure here you can override inside a flavor.
@@ -21,7 +21,7 @@ configure here you can override inside a flavor.
 `productFlavors` declares our `dev` and `qa` flavors setting up a single app name and bundle id for each flavor. 
 For the app name setting to take effect, make sure the `AndroidManifest.xml` is using the resource `app_name` as the application label.
 
-## iOS Flavos
+## iOS Flavors
 
 iOS is bit trickier, everything must be done through the xcode UI.
 
@@ -33,7 +33,7 @@ Next we need to create **schemas**, those are the actual flavors of iOS. On the 
 With that the project already build with flavors.
 To change the buindle ID we go to target build settings configurations. There you can see a `Product Bundle Identifier`, expanding it shows all our configs, so we can set any ID for any configuration.
 
-To change the app name per flavor, on target build settings configurations, add an user defined setting and call it `APP_DISPLAY_NAME`. Now if you expande it you can see the setting for each flavor, so you can set whatever name you want for each flavor.
+To change the app name per flavor, on target build settings configurations, add an user defined setting and call it `APP_DISPLAY_NAME`. Now if you expand it you can see the setting for each flavor, so you can set whatever name you want for each flavor.
 Then go to `Info.plist` and set the `Bundle display name` to be `$(APP_DISPLAY_NAME)`.
 
 ## Flutter Flavors
